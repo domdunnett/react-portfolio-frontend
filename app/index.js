@@ -10,15 +10,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const HelloWorld = React.createClass({
+const NavBar = React.createClass({
   render: function() {
     return(
-      <div> Hello {this.props.name}! </div>
+      <div>
+        <NavLink changeUrl={this.props.changeUrl} linkName="Home" />
+        <NavLink linkName="About" />
+        <NavLink linkName="Contact" />
+      </div>
+    )
+  }
+});
+
+const NavLink = React.createClass({
+  render: function() {
+    return(
+      <span>
+        <a href={`https://github.com/${this.props.changeUrl}`} style={{color: 'blue', cursor: 'pointer', padding: '2em'}}>{this.props.linkName}</a>
+      </span>
     )
   }
 });
 
 ReactDOM.render(
-  <HelloWorld name="Tessa"/>,
+  <NavBar changeUrl="domdunnett"/>,
   document.getElementById('app')
 );
