@@ -14,7 +14,7 @@ const NavBar = React.createClass({
   render: function() {
     return(
       <div>
-        <NavLink changeUrl={this.props.changeUrl} linkName="Home" />
+        <NavLink link={`https://github.com/${this.props.username}`} linkName="Home" />
         <NavLink linkName="About" />
         <NavLink linkName="Contact" />
       </div>
@@ -23,16 +23,22 @@ const NavBar = React.createClass({
 });
 
 const NavLink = React.createClass({
+  changeUrl: function() {
+    window.location.replace(this.props.link);
+  },
   render: function() {
+    console.log(this.props);
     return(
-      <span>
-        <a href={`https://github.com/${this.props.changeUrl}`} style={{color: 'blue', cursor: 'pointer', padding: '2em'}}>{this.props.linkName}</a>
+      <span
+        onClick={this.changeUrl}
+        style={{color: 'blue', cursor: 'pointer', padding: '2em'}}>
+        {this.props.linkName}
       </span>
     )
   }
 });
 
 ReactDOM.render(
-  <NavBar changeUrl="domdunnett"/>,
+  <NavBar username="domdunnett"/>,
   document.getElementById('app')
 );
