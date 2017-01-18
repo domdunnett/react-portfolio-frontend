@@ -1,17 +1,15 @@
 import React from 'react';
-import ReactRouter from 'react-router';
-import Navbar from '../components/Navbar';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import NavBar from '../components/NavBar';
 import NavLink from '../components/NavLink';
 import Home from '../components/Home';
-
-const Router = ReactRouter.Router;
-const Route = ReactRouter.Route;
-const IndexRoute = ReactRouter.IndexRoute;
+import About from '../components/About';
 
 const routes = (
-  <Router>
+  <Router history={hashHistory}>
     <Route path="/" component={NavBar}>
-      <Route path="/home" component={Home}></Route>
+      <IndexRoute component={Home} />
+      <Route path="/about" component={About} />
     </Route>
   </Router>
 );
