@@ -1,19 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-const NavLink = React.createClass({
-  changeUrl: function() {
-    window.location.replace(this.props.link);
-  },
-  render: function() {
-    console.log(this.props);
-    return(
-      <span
-        onClick={this.changeUrl}
-        style={{color: 'blue', cursor: 'pointer', padding: '2em'}}>
-        {this.props.linkName}
-      </span>
-    )
-  }
-});
+const NavLink = ({ linkName, clickHandler, linkColor }) =>
+  <Link to={`${linkName}`.toLowerCase()} onClick={() => clickHandler(linkName)} style={linkColor}>{linkName}</Link>
 
 module.exports = NavLink;
