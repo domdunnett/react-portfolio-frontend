@@ -1,6 +1,12 @@
 const styles = {
-  backgroundColor: 'blue',
-  color: 'red',
+  activeLink: {
+    paddingRight: '2em',
+    color:  'red'
+  },
+  nonActiveLink: {
+    paddingRight: '2em',
+    color:  'blue'
+  }
 }
 
 module.exports = styles;

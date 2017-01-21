@@ -1,6 +1,6 @@
 import React from 'react';
 import NavLink from './NavLink';
-import Styles from '../styles/styles'
+import Styles from '../styles/styles';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -29,9 +29,9 @@ class NavBar extends React.Component {
   render() {
     return(
       <div>
-        <NavLink linkName="Home" clickHandler={this.clickLink} linkColor={{ paddingRight: '2em', color:  this.state.link.Home ? 'red' : 'blue' }} />
-        <NavLink linkName="About" clickHandler={this.clickLink} linkColor={{ paddingRight: '2em', color:  this.state.link.About ? 'red' : 'blue' }} />
-        <NavLink linkName="Contact" clickHandler={this.clickLink} linkColor={{ paddingRight: '2em', color:  this.state.link.Contact ? 'red' : 'blue' }} />
+        <NavLink linkName="Home" clickHandler={this.clickLink} linkColor={this.state.link.Home ? Styles.activeLink : Styles.nonActiveLink} />
+        <NavLink linkName="About" clickHandler={this.clickLink} linkColor={this.state.link.About ? Styles.activeLink : Styles.nonActiveLink} />
+        <NavLink linkName="Contact" clickHandler={this.clickLink} linkColor={this.state.link.Contact ? Styles.activeLink : Styles.nonActiveLink} />
         {this.props.children}
       </div>
     )
