@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const NavLink = ({ linkName, clickHandler, linkColor }) =>
-  <Link to={`${linkName}`.toLowerCase()} onClick={() => clickHandler(linkName)} style={linkColor}>{linkName}</Link>
+const NavLink = ({ linkName, clickHandler, linkStyle }) =>
+  <Link to={`${linkName}`.toLowerCase()} onClick={() => clickHandler(linkName)} style={linkStyle}>{linkName}</Link>
 
 module.exports = NavLink;

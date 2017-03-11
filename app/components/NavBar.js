@@ -1,5 +1,6 @@
 import React from 'react';
 import NavLink from './NavLink';
+import Logo from './Logo';
 import Styles from '../styles/styles';
 
 class NavBar extends React.Component {
@@ -29,9 +30,10 @@ class NavBar extends React.Component {
   render() {
     return(
       <div>
-        <NavLink linkName="Home" clickHandler={this.clickLink} linkColor={this.state.link.Home ? Styles.activeLink : Styles.nonActiveLink} />
-        <NavLink linkName="About" clickHandler={this.clickLink} linkColor={this.state.link.About ? Styles.activeLink : Styles.nonActiveLink} />
-        <NavLink linkName="Contact" clickHandler={this.clickLink} linkColor={this.state.link.Contact ? Styles.activeLink : Styles.nonActiveLink} />
+        <Logo />
+        <NavLink linkName="Home" clickHandler={this.clickLink} linkStyle={this.state.link.Home ? Styles.activeLink : Styles.nonActiveLink} />
+        <NavLink linkName="About" clickHandler={this.clickLink} linkStyle={this.state.link.About ? Styles.activeLink : Styles.nonActiveLink} />
+        <NavLink linkName="Contact" clickHandler={this.clickLink} linkStyle={this.state.link.Contact ? Styles.activeLink : Styles.nonActiveLink} />
         {this.props.children}
       </div>
     )

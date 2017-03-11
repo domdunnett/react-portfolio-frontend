@@ -1,5 +1,13 @@
 import React from 'react';
 
-const Contact = () => <div>Hello from Contact Page!</div>;
+const Contact = React.createClass({
+  render: function() {
+    return(
+      <div>
+        <span>Ping me an Email.</span>
+      </div>
+    )
+  }
+});
 
 module.exports = Contact;
