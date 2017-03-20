@@ -28,15 +28,25 @@ class NavBar extends React.Component {
   }
 
   render() {
+    var DuckImage = require('../images/kennedyBorder.svg');
+
+    var bannerStyle = {
+        backgroundImage: 'url(' + DuckImage + ')',
+        backgroundSize: 'cover',
+        height: '100%'
+    }
+
     return(
-      <div>
+      <div style={bannerStyle}>
         <Logo />
-        <div>
+        <div style={{ marginLeft: '6em' }}>
           <NavLink linkName="Home" clickHandler={this.clickLink} linkStyle={this.state.link.Home ? Styles.activeLink : Styles.nonActiveLink} />
           <NavLink linkName="About" clickHandler={this.clickLink} linkStyle={this.state.link.About ? Styles.activeLink : Styles.nonActiveLink} />
           <NavLink linkName="Contact" clickHandler={this.clickLink} linkStyle={this.state.link.Contact ? Styles.activeLink : Styles.nonActiveLink} />
         </div>
-        {this.props.children}
+        <div>
+          {this.props.children}
+        </div>
       </div>
     )
   }

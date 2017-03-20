@@ -16,7 +16,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'}
+      {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
+      {test: /\.svg$/, loader: 'url-loader?' + __dirname + '/images/[name].[ext]'},
     ]
   },
   plugins: [HtmlWebpackPluginConfig]
