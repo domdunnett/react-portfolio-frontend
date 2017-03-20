@@ -31,9 +31,11 @@ class NavBar extends React.Component {
     return(
       <div>
         <Logo />
-        <NavLink linkName="Home" clickHandler={this.clickLink} linkStyle={this.state.link.Home ? Styles.activeLink : Styles.nonActiveLink} />
-        <NavLink linkName="About" clickHandler={this.clickLink} linkStyle={this.state.link.About ? Styles.activeLink : Styles.nonActiveLink} />
-        <NavLink linkName="Contact" clickHandler={this.clickLink} linkStyle={this.state.link.Contact ? Styles.activeLink : Styles.nonActiveLink} />
+        <div>
+          <NavLink linkName="Home" clickHandler={this.clickLink} linkStyle={this.state.link.Home ? Styles.activeLink : Styles.nonActiveLink} />
+          <NavLink linkName="About" clickHandler={this.clickLink} linkStyle={this.state.link.About ? Styles.activeLink : Styles.nonActiveLink} />
+          <NavLink linkName="Contact" clickHandler={this.clickLink} linkStyle={this.state.link.Contact ? Styles.activeLink : Styles.nonActiveLink} />
+        </div>
         {this.props.children}
       </div>
     )
