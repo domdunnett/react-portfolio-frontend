@@ -1,9 +1,10 @@
 import React from 'react';
+import Styles from '../styles/styles';
 
 const About = React.createClass({
   render: function() {
     return(
-      <div>
+      <div style={Styles.contentLayer}>
         <p>I am a full stack web developer and web designer from Edinburgh, Scotland currently resident in Singapore.</p>
         <p>Hobbies:</p>
         <ul>

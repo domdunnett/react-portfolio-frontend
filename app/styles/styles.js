@@ -18,6 +18,10 @@ const styles = {
     boxShadow: 'black 0 2px 5px 0',
     color: 'black',
     margin: '1em 2em 2em 2em'
+  },
+  contentLayer: {
+    marginLeft: '8em',
+    marginTop: '3em',
   }
 }
 
