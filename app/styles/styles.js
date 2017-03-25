@@ -1,3 +1,5 @@
+const borderSvg = require('../images/kennedyBorder.svg');
+
 const styles = {
   activeLink: {
     padding: '5px 10px',
@@ -22,6 +24,11 @@ const styles = {
   contentLayer: {
     marginLeft: '8em',
     marginTop: '3em',
+  },
+  bannerStyle: {
+    backgroundImage: `url('${borderSvg}')`,
+    backgroundSize: 'cover',
+    height: '100vh'
   }
 }
 
