@@ -1,17 +1,19 @@
 import React from 'react';
 import NavLink from './NavLink';
 import Logo from './Logo';
+import LanguageSelector from './LanguageSelector';
 import Styles from '../styles/styles';
 
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      language: 'English',
       link: {
         About: true,
         Tech: false,
         Contact: false,
-      }
+      },
     };
     this.clickLink = this.clickLink.bind(this);
   }
@@ -27,17 +29,41 @@ class NavBar extends React.Component {
     this.setState({ link: currentLinkState });
   }
 
+  changeLanguage(event) {
+    event.preventDefault();
+    this.setState({ language: event.target.innerText });
+  }
+
   render() {
-    return(
+    const childrenWithProps = React.Children.map(this.props.children,
+     (child) => React.cloneElement(child, {
+       language: this.state.language
+     })
+    );
+
+    return (
       <div style={Styles.bannerStyle}>
         <Logo />
         <div style={{ marginLeft: '6em' }}>
-          <NavLink linkName="About" clickHandler={this.clickLink} linkStyle={this.state.link.About ? Styles.activeLink : Styles.nonActiveLink} />
-          <NavLink linkName="Tech" clickHandler={this.clickLink} linkStyle={this.state.link.Tech ? Styles.activeLink : Styles.nonActiveLink} />
-          <NavLink linkName="Contact" clickHandler={this.clickLink} linkStyle={this.state.link.Contact ? Styles.activeLink : Styles.nonActiveLink} />
+          <NavLink
+            linkName="About"
+            clickHandler={this.clickLink}
+            linkStyle={this.state.link.About ? Styles.activeLink : Styles.nonActiveLink}
+          />
+          <NavLink
+            linkName="Tech"
+            clickHandler={this.clickLink}
+            linkStyle={this.state.link.Tech ? Styles.activeLink : Styles.nonActiveLink}
+          />
+          <NavLink
+            linkName="Contact"
+            clickHandler={this.clickLink}
+            linkStyle={this.state.link.Contact ? Styles.activeLink : Styles.nonActiveLink}
+          />
+          <LanguageSelector changeLanguage={this.changeLanguage.bind(this)} currentLanguage={this.state.language} />
         </div>
         <div>
-          {this.props.children}
+          {childrenWithProps}
         </div>
       </div>
     )
