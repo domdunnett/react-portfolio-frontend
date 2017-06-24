@@ -8,7 +8,7 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      language: 'English',
+      language: 'Eng',
       link: {
         About: true,
         Tech: false,
@@ -44,7 +44,7 @@ class NavBar extends React.Component {
     return (
       <div style={Styles.bannerStyle}>
         <Logo />
-        <div style={{ marginLeft: '6em' }}>
+        <div style={{ marginLeft: '60px' }}>
           <NavLink
             linkName="About"
             clickHandler={this.clickLink}

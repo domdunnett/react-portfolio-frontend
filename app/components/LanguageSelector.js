@@ -2,12 +2,12 @@ import React, { PropTypes } from 'react';
 import Styles from '../styles/styles';
 
 const LanguageSelector = props => (
-  <div style={{ display: 'inline', float: 'right', marginTop: '2em' }}>
+  <div style={Object.assign({}, Styles.LanguageSelector, { display: 'inline', float: 'right' })}>
     <a
       href=""
-      style={props.currentLanguage === 'English' ? Styles.activeLanguage : Styles.nonActiveLanguage}
+      style={props.currentLanguage === 'Eng' ? Styles.activeLanguage : Styles.nonActiveLanguage}
       onClick={event => props.changeLanguage(event)}
-    >English</a>
+    >Eng</a>
     |
     <a
       href=""
@@ -23,7 +23,7 @@ LanguageSelector.propTypes = {
 };
 
 LanguageSelector.defaultProps = {
-  currentLanguage: 'English',
+  currentLanguage: 'Eng',
 };
 
 export default LanguageSelector;

@@ -1,9 +1,12 @@
 const borderSvg = require('../images/kennedyBorder.svg');
 
 const styles = {
+  domDunnettLogo: {
+    marginLeft: '85px',
+    marginTop: '35px',
+  },
   activeLink: {
     cursor: 'default',
-    padding: '5px 10px',
     textDecoration: 'underline',
     display: 'inline-block',
     backgroundColor: 'white',
@@ -13,7 +16,6 @@ const styles = {
     marginLeft: '1.5em',
   },
   nonActiveLink: {
-    padding: '5px 10px',
     textDecoration: 'none',
     display: 'inline-block',
     backgroundColor: 'white',
@@ -22,15 +24,21 @@ const styles = {
     marginTop: '2em',
     marginLeft: '1.5em',
   },
+  LanguageSelector: {
+    marginTop: '2em',
+    marginLeft: '1.5em',
+  },
   contentLayer: {
-    marginLeft: '8em',
-    marginTop: '4em',
+    marginLeft: '85px',
+    marginTop: '95px',
     fontFamily: 'sans-serif',
     listStyle: 'none',
   },
   bannerStyle: {
     backgroundImage: `url('${borderSvg}')`,
-    backgroundSize: 'cover',
+    backgroundSize: '1500px auto',
+    backgroundRepeat: 'no-repeat',
+    backgroundPositionX: '-60px',
     height: '100vh',
     fontFamily: 'sans-serif',
   },
