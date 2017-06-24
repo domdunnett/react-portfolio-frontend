@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack -p && webpack-dev-server",
-    "lint": "eslint ./app"
+    "lint": "eslint ./app",
+    "heroku-postbuild": "webpack -p && webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
