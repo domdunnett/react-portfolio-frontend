@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack -p && webpack-dev-server",
     "lint": "eslint ./app",
-    "heroku-postinstall": "webpack -p"
+    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
   },
   "engines": {
     "node": "4.6.0",
