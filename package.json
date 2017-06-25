@@ -4,9 +4,9 @@
   "description": "personal website",
   "main": "index.js",
   "scripts": {
-    "start": "webpack -p && webpack-dev-server",
+    "start": "webpack-dev-server",
     "lint": "eslint ./app",
-    "heroku-postbuild": "webpack -p && webpack-dev-server"
+    "heroku-postbuild": "webpack -p"
   },
   "engines": {
     "node": "4.6.0",
