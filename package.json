@@ -4,7 +4,7 @@
   "description": "personal website",
   "main": "index.js",
   "scripts": {
-    "start": "node ./dist/index_bundle.js",
+    "start": "webpack -p && webpack-dev-server",
     "lint": "eslint ./app",
     "build": "webpack --config ./webpack.config.js --progress --colors"
   },
