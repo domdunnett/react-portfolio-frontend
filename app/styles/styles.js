@@ -18,7 +18,7 @@ const styles = {
   nonActiveLink: {
     textDecoration: 'none',
     display: 'inline-block',
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     borderRadius: '4px',
     color: 'black',
     marginTop: '2em',
