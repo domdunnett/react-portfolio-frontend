@@ -33,6 +33,9 @@ const styles = {
     marginTop: '95px',
     fontFamily: 'sans-serif',
     listStyle: 'none',
+    mobile: {
+      fontSize: '120%',
+    },
   },
   bannerStyle: {
     backgroundImage: `url('${borderSvg}')`,

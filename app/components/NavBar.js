@@ -1,5 +1,7 @@
 import React from 'react';
+import MediaQuery from 'react-responsive';
 import NavLink from './NavLink';
+import SmallLogo from './SmallLogo';
 import Logo from './Logo';
 import LanguageSelector from './LanguageSelector';
 import Styles from '../styles/styles';
@@ -43,7 +45,12 @@ class NavBar extends React.Component {
 
     return (
       <div style={Styles.bannerStyle}>
-        <Logo />
+        <MediaQuery minWidth="1224px">
+          <Logo />
+        </MediaQuery>
+        <MediaQuery maxWidth="1224px">
+          <SmallLogo />
+        </MediaQuery>
         <div style={{ marginLeft: '60px' }}>
           <NavLink
             linkName="About"
