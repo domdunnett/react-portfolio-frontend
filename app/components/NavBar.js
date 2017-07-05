@@ -18,6 +18,7 @@ class NavBar extends React.Component {
       },
     };
     this.clickLink = this.clickLink.bind(this);
+    this.changeLanguage = this.changeLanguage.bind(this);
   }
 
   clickLink(clickedLinkName) {
@@ -38,9 +39,9 @@ class NavBar extends React.Component {
 
   render() {
     const childrenWithProps = React.Children.map(this.props.children,
-     (child) => React.cloneElement(child, {
-       language: this.state.language
-     })
+     child => React.cloneElement(child, {
+       language: this.state.language,
+     }),
     );
 
     return (
@@ -67,14 +68,17 @@ class NavBar extends React.Component {
             clickHandler={this.clickLink}
             linkStyle={this.state.link.Contact ? Styles.activeLink : Styles.nonActiveLink}
           />
-          <LanguageSelector changeLanguage={this.changeLanguage.bind(this)} currentLanguage={this.state.language} />
+          <LanguageSelector
+            changeLanguage={this.changeLanguage}
+            currentLanguage={this.state.language}
+          />
         </div>
         <div>
           {childrenWithProps}
         </div>
       </div>
-    )
+    );
   }
-};
+}
 
 module.exports = NavBar;
