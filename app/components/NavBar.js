@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import MediaQuery from 'react-responsive';
 import NavLink from './NavLink';
 import SmallLogo from './SmallLogo';
@@ -80,5 +80,9 @@ class NavBar extends React.Component {
     );
   }
 }
+
+NavBar.propTypes = {
+  children: PropTypes.instanceOf(NavLink).isRequired,
+};
 
 module.exports = NavBar;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
 const NavLink = props => (
@@ -10,5 +10,13 @@ const NavLink = props => (
     {props.linkName}
   </Link>
 );
+
+NavLink.propTypes = {
+  linkName: PropTypes.string.isRequired,
+  clickHandler: PropTypes.func.isRequired,
+  linkStyle: PropTypes.isObject(PropTypes.shape({
+    marginTop: PropTypes.string,
+  })).isRequired,
+};
 
 module.exports = NavLink;

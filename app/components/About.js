@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import MediaQuery from 'react-responsive';
 import Styles from '../styles/styles';
 
@@ -18,7 +18,8 @@ const About = props => (
             </ul>
           </div> :
           <div>
-            <p>I am a full stack web developer and web designer from Edinburgh, Scotland currently resident in Singapore.</p>
+            <p>I am a full stack web developer and web designer from Edinburgh,
+              Scotland currently resident in Singapore.</p>
             <p>Hobbies:</p>
             <ul style={{ listStyle: 'none' }}>
               <li>- Travel</li>
@@ -44,7 +45,8 @@ const About = props => (
             </ul>
           </div> :
           <div>
-            <p>I am a full stack web developer and web designer from Edinburgh, Scotland currently resident in Singapore.</p>
+            <p>I am a full stack web developer and web designer from Edinburgh,
+              Scotland currently resident in Singapore.</p>
             <p>Hobbies:</p>
             <ul style={{ listStyle: 'none' }}>
               <li>- Travel</li>
@@ -58,5 +60,9 @@ const About = props => (
     </MediaQuery>
   </div>
 );
+
+About.propTypes = {
+  language: PropTypes.string.isRequired,
+};
 
 module.exports = About;

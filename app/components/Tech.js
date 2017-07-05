@@ -10,7 +10,8 @@ const Tech = () => (
         <SkyscannerLogo alt="Skyscanner" />
       </a>
     </p>
-    <p>I am comfortable working in all areas of web development from initial design, to both frontend and backend development.</p>
+    <p>I am comfortable working in all areas of web development from initial design,
+      to both frontend and backend development.</p>
     <p>Tech Experience:</p>
     <ul>
       <li>Javascript</li>
