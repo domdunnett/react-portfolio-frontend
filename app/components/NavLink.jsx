@@ -14,9 +14,7 @@ const NavLink = props => (
 NavLink.propTypes = {
   linkName: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
-  linkStyle: PropTypes.objectOf(PropTypes.shape({
-    marginTop: PropTypes.string,
-  })).isRequired,
+  linkStyle: PropTypes.object.isRequired,
 };
 
 module.exports = NavLink;

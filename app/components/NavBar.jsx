@@ -82,7 +82,7 @@ class NavBar extends React.Component {
 }
 
 NavBar.propTypes = {
-  children: PropTypes.instanceOf(NavLink).isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 module.exports = NavBar;

@@ -62,7 +62,11 @@ const About = props => (
 );
 
 About.propTypes = {
-  language: PropTypes.string.isRequired,
+  language: PropTypes.string,
+};
+
+About.defaultProps = {
+  language: 'eng',
 };
 
 module.exports = About;
