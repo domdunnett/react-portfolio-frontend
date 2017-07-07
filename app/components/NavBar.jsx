@@ -56,17 +56,17 @@ class NavBar extends React.Component {
           <NavLink
             linkName="About"
             clickHandler={this.clickLink}
-            linkStyle={this.state.link.About ? Styles.activeLink : Styles.nonActiveLink}
+            isActive={this.state.link.About}
           />
           <NavLink
             linkName="Tech"
             clickHandler={this.clickLink}
-            linkStyle={this.state.link.Tech ? Styles.activeLink : Styles.nonActiveLink}
+            isActive={this.state.link.Tech}
           />
           <NavLink
             linkName="Contact"
             clickHandler={this.clickLink}
-            linkStyle={this.state.link.Contact ? Styles.activeLink : Styles.nonActiveLink}
+            isActive={this.state.link.Contact}
           />
           <LanguageSelector
             changeLanguage={this.changeLanguage}

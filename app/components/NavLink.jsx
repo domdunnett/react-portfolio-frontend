@@ -1,11 +1,12 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
+import Styles from '../styles/styles';
 
 const NavLink = props => (
   <Link
     to={`${props.linkName}`.toLowerCase()}
     onClick={() => props.clickHandler(props.linkName)}
-    style={props.linkStyle}
+    style={props.isActive ? Styles.activeLink : Styles.nonActiveLink}
   >
     {props.linkName}
   </Link>
@@ -14,7 +15,7 @@ const NavLink = props => (
 NavLink.propTypes = {
   linkName: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
-  linkStyle: PropTypes.object.isRequired,
+  isActive: PropTypes.bool.isRequired,
 };
 
 module.exports = NavLink;
