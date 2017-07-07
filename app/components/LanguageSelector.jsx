@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Styles from '../styles/styles';
 
 const LanguageSelector = props => (
-  <div style={Object.assign({}, Styles.LanguageSelector, { display: 'inline', float: 'right' })}>
+  <div style={Object.assign({}, Styles.LanguageSelector)}>
     <a
       href=""
       style={props.currentLanguage === 'Eng' ? Styles.activeLanguage : Styles.nonActiveLanguage}

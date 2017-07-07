@@ -25,8 +25,10 @@ const styles = {
     marginLeft: '1.5em',
   },
   LanguageSelector: {
-    marginTop: '2em',
+    marginTop: '1.8em',
     marginLeft: '1.5em',
+    display: 'inline',
+    float: 'right',
   },
   contentLayer: {
     marginLeft: '85px',
