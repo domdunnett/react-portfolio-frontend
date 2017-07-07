@@ -17,9 +17,12 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
       { test: /\.svg$/, loader: path.join('url-loader?', __dirname, '/images/[name].[ext]') },
     ],
+  },
+  resolve: {
+    extensions: ['', '.webpack.js', '.web.js', '.js', '.json', '.jsx'],
   },
   plugins: [HtmlWebpackPluginConfig],
 };

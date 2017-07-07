@@ -14,7 +14,7 @@ const NavLink = props => (
 NavLink.propTypes = {
   linkName: PropTypes.string.isRequired,
   clickHandler: PropTypes.func.isRequired,
-  linkStyle: PropTypes.isObject(PropTypes.shape({
+  linkStyle: PropTypes.objectOf(PropTypes.shape({
     marginTop: PropTypes.string,
   })).isRequired,
 };
