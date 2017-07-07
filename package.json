@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack -p && webpack-dev-server --hot --inline",
     "lint": "eslint ./app",
-    "build": "webpack --config ./webpack.config.js --progress --colors"
+    "build": "eslint ./app && webpack --config ./webpack.config.js --progress --colors"
   },
   "engines": {
     "node": "4.6.0",
