@@ -12,9 +12,9 @@ class NavBar extends React.Component {
     this.state = {
       language: 'Eng',
       link: {
-        About: true,
-        Tech: false,
-        Contact: false,
+        About: (this.props.routes[1].path === 'about'),
+        Tech: (this.props.routes[1].path === 'tech'),
+        Contact: (this.props.routes[1].path === 'contact'),
       },
     };
     this.clickLink = this.clickLink.bind(this);
@@ -83,6 +83,9 @@ class NavBar extends React.Component {
 
 NavBar.propTypes = {
   children: PropTypes.node.isRequired,
+  routes: PropTypes.arrayOf(PropTypes.shape({
+    path: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 module.exports = NavBar;
