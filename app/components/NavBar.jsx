@@ -5,6 +5,7 @@ import SmallLogo from './SmallLogo';
 import Logo from './Logo';
 import LanguageSelector from './LanguageSelector';
 import Styles from '../styles/styles';
+import OnePercentLogo from '../images/OnePercentLogo.jpg';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -76,6 +77,9 @@ class NavBar extends React.Component {
         <div>
           {childrenWithProps}
         </div>
+        <a href="http://www.onepercentfortheplanet.org/individuals/" rel="noreferrer noopener" target="_blank">
+          <img style={Styles.onePercentLogo} src={OnePercentLogo} alt="1% For The Planet Logo" />
+        </a>
       </div>
     );
   }

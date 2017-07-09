@@ -59,6 +59,12 @@ const styles = {
     color: 'black',
     margin: '0 0.5em 0 0.5em',
   },
+  onePercentLogo: {
+    position: 'absolute',
+    right: '0',
+    bottom: '0',
+    width: '150px',
+  },
 };
 
 module.exports = styles;

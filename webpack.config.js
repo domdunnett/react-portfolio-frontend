@@ -18,7 +18,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.svg$/, loader: path.join('url-loader?', __dirname, '/images/[name].[ext]') },
+      { test: /\.(jpe?g|png|gif|svg)$/i, loader: path.join('url-loader?', __dirname, '/images/[name].[ext]') },
     ],
   },
   resolve: {
