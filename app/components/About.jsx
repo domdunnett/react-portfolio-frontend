@@ -5,7 +5,7 @@ import Styles from '../styles/styles';
 const About = props => (
   <div>
     <MediaQuery minWidth="1224px">
-      <div style={Styles.contentLayer}>
+      <div style={Styles.contentLayer.desktop}>
         { props.language === '中文' ?
           <div>
             <p>我叫邓大义。我是苏格兰，愛丁堡人。现在，我住在新加坡。我是軟件工程師。</p>
@@ -32,7 +32,7 @@ const About = props => (
       </div>
     </MediaQuery>
     <MediaQuery maxWidth="1224px">
-      <div style={Object.assign({}, Styles.contentLayer, Styles.contentLayer.mobile)}>
+      <div style={Styles.contentLayer.mobile}>
         { props.language === '中文' ?
           <div>
             <p>我叫邓大义。我是苏格兰，愛丁堡人。现在，我住在新加坡。我是軟件工程師。</p>

@@ -2,7 +2,7 @@ import React from 'react';
 import Styles from '../styles/styles';
 
 const SmallLogo = () => (
-  <svg style={Styles.domDunnettLogo} width="55px" height="41px" viewBox="0 0 55 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+  <svg style={Styles.domDunnettLogo} width="110px" height="82px" viewBox="0 0 55 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
     <title>Logo - Mobile</title>
     <desc>Created with Sketch.</desc>
     <defs />

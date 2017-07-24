@@ -53,27 +53,60 @@ class NavBar extends React.Component {
         <MediaQuery maxWidth="1224px">
           <SmallLogo />
         </MediaQuery>
-        <div style={{ marginLeft: '60px' }}>
-          <NavLink
-            linkName="About"
-            clickHandler={this.clickLink}
-            isActive={this.state.link.About}
-          />
-          <NavLink
-            linkName="Tech"
-            clickHandler={this.clickLink}
-            isActive={this.state.link.Tech}
-          />
-          <NavLink
-            linkName="Contact"
-            clickHandler={this.clickLink}
-            isActive={this.state.link.Contact}
-          />
-          <LanguageSelector
-            changeLanguage={this.changeLanguage}
-            currentLanguage={this.state.language}
-          />
-        </div>
+        <MediaQuery minWidth="1224px">
+          <div style={{ marginLeft: '60px' }}>
+            <NavLink
+              linkName="About"
+              device="desktop"
+              clickHandler={this.clickLink}
+              isActive={this.state.link.About}
+            />
+            <NavLink
+              linkName="Tech"
+              device="desktop"
+              clickHandler={this.clickLink}
+              isActive={this.state.link.Tech}
+            />
+            <NavLink
+              linkName="Contact"
+              device="desktop"
+              clickHandler={this.clickLink}
+              isActive={this.state.link.Contact}
+            />
+            <LanguageSelector
+              device="desktop"
+              changeLanguage={this.changeLanguage}
+              currentLanguage={this.state.language}
+            />
+          </div>
+        </MediaQuery>
+        <MediaQuery maxWidth="1224px">
+          <div style={{ marginLeft: '60px', marginTop: '60px' }}>
+            <NavLink
+              linkName="About"
+              device="mobile"
+              clickHandler={this.clickLink}
+              isActive={this.state.link.About}
+            />
+            <NavLink
+              linkName="Tech"
+              device="mobile"
+              clickHandler={this.clickLink}
+              isActive={this.state.link.Tech}
+            />
+            <NavLink
+              linkName="Contact"
+              device="mobile"
+              clickHandler={this.clickLink}
+              isActive={this.state.link.Contact}
+            />
+            <LanguageSelector
+              device="mobile"
+              changeLanguage={this.changeLanguage}
+              currentLanguage={this.state.language}
+            />
+          </div>
+        </MediaQuery>
         <div>
           {childrenWithProps}
         </div>
